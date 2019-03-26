@@ -1,4 +1,4 @@
-cd %~dp0\test_data
+cd /D %~dp0\test_data
 
 :: From @mhearne-usgs. See https://github.com/conda-forge/gdal-feedstock/issues/23#issue-144997326
 :: This test is not passing on 2.3.0

@@ -26,6 +26,7 @@ requirements:
     - pkg-config >=0.21  # [not win]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - m2-patch  # [win]
   host:
     - curl
     - expat
@@ -74,6 +75,7 @@ outputs:
         # libstdc++ is needed in requirements/run
         - {{ compiler('cxx') }}
         - pkg-config  # [not win]
+        - m2-patch  # [win]
       host:
         - curl
         - expat
@@ -131,7 +133,7 @@ outputs:
         - gdalwarp --version
         - gdalinfo --formats
         - gdalinfo http://thredds.nersc.no/thredds/dodsC/greenpath/Model/topaz  # [not win]
-        - {{ RECIPE_DIR }}/run_test.bat  # [win]
+        - {{ RECIPE_DIR }}\\run_test.bat  # [win]
         - bash {{ RECIPE_DIR }}/run_test.sh  # [not win]
     about:
       summary: 'The Geospatial Data Abstraction Library (GDAL)'
@@ -143,6 +145,8 @@ outputs:
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
         - cmake  # [win]
+        - m2-patch  # [win]
+        - m2-bash  # [win]
       host:
         - python
         - pip
@@ -178,7 +182,7 @@ about:
   license_file: LICENSE.TXT
   summary: |
     GDAL is a translator library for raster and vector geospatial data formats that is released under an
-    X/MIT style Open Source license by the Open Source Geospatial Foundation. 
+    X/MIT style Open Source license by the Open Source Geospatial Foundation.
 
 extra:
   recipe-maintainers:

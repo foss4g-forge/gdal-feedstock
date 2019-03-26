@@ -41,7 +41,7 @@ numpy:
 openjpeg:
 - '2.3'
 openssl:
-- 1.1.1a
+- 1.0.2
 pin_run_as_build:
   curl:
     max_pin: x
@@ -75,6 +75,8 @@ pin_run_as_build:
     max_pin: x.x.x
   poppler:
     max_pin: x.x
+  postgresql:
+    max_pin: x.x
   proj4:
     max_pin: x.x.x
   python:
@@ -94,6 +96,8 @@ poppler:
 - 0.67.0
 proj4:
 - 5.2.0
+postgresql:
+- 10.6
 python:
 - '3.6'
 - '3.7'
