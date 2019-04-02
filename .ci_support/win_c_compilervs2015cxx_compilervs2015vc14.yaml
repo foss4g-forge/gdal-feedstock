@@ -1,5 +1,5 @@
 c_compiler:
-- vs2015
+# - vs2015
 - vs2015
 channel_sources:
 - conda-forge,defaults
@@ -8,7 +8,7 @@ channel_targets:
 curl:
 - '7.64'
 cxx_compiler:
-- vs2015
+# - vs2015
 - vs2015
 expat:
 - '2.2'
@@ -37,7 +37,7 @@ libtiff:
 libxml2:
 - '2.9'
 numpy:
-- '1.11'
+- 1.15.3
 openjpeg:
 - '2.3'
 openssl:
@@ -69,6 +69,8 @@ pin_run_as_build:
     max_pin: x
   libxml2:
     max_pin: x.x
+  numpy:
+    max_pin: x.x.x
   openjpeg:
     max_pin: x.x
   openssl:
@@ -80,8 +82,8 @@ pin_run_as_build:
   proj4:
     max_pin: x.x.x
   python:
-    min_pin: x.x
-    max_pin: x.x
+    min_pin: x.x.x
+    max_pin: x.x.x
   sqlite:
     max_pin: x
   vc:
@@ -99,12 +101,12 @@ proj4:
 postgresql:
 - 10.6
 python:
-- '3.6'
-- '3.7'
+# - '3.6'
+- '3.7.1'
 sqlite:
 - '3'
 vc:
-- '14'
+# - '14'
 - '14'
 xerces_c:
 - 3.2.2

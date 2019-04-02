@@ -17,7 +17,7 @@ source:
     - patches/disable_jpeg12.patch  # [win]
 
 build:
-  number: 1005
+  number: 1006
   skip: True  # [win and vc<14]
 
 requirements:
@@ -168,6 +168,7 @@ outputs:
         - osgeo.ogr
         - osgeo.gdal
         - osgeo._gdal
+        - osgeo._gdal_array
         - osgeo._gdalconst
         - osgeo._ogr
         - osgeo._osr
